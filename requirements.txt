@@ -1,0 +1,4 @@
+# Gereken paketler
+python-dotenv
+flask
+pandas
