@@ -1,16 +1,74 @@
-# Spin-Quantum-Hash
+# Spin-Quantum-Hash – Quantum-Inspired 512-bit Hash Generator
 
-Spin-Quantum-Hash is a novel cryptographic hash algorithm that leverages the fundamental principles of quantum mechanics to generate a unique and exceptionally secure hash value. Unlike classical hash functions that rely on deterministic bit manipulation, this algorithm introduces a layer of quantum complexity and probabilistic behavior to the hashing process, making it highly resistant to modern computational attacks.
+This project is a Python program that generates **Spin-Quantum-Hash**, inspired by classical hash functions.
+The goal is to take a given text and deterministically produce a 512-bit hash.
 
-At its core, the algorithm models a quantum system of 512 virtual electrons. A classical input string is first converted into a set of hidden, continuous parameters—specifically, the initial spin angles of these electrons. These angles are not directly part of the hash output, but they define a quantum state where each electron exists in a superposition of both spin-up and spin-down.
+---
 
-The final 512-bit hash is the result of a probabilistic "collapse" of these quantum states. When the system is "measured," each electron's superposition collapses into a definitive spin-up (1) or spin-down (0) state. Although this collapse is probabilistic, the underlying quantum state is a deterministic function of the input, ensuring that the same input always produces the same hash output.
+## Features
 
-The true security of Spin-Quantum-Hash lies in the vastness of its hidden state space. An attacker attempting to find a collision or reverse-engineer the algorithm would not only have to guess a 512-bit value but also solve for the theoretically infinite combinations of hidden spin angles that produced it. This makes brute-force and pre-image attacks computationally infeasible.
+* **Deterministic:** Always produces the same hash output for the same input.
+* **Quantum-Analog:** The internal logic is designed with quantum superposition and entanglement analogies (mathematically not quantum, only an analogy).
+* **512-bit Output:** The hash output is always a 512-bit value.
+* **Easy to Use:** Generates a hash and analyzes it with a single text input.
+* **Frequency Analysis:** Analyzes the frequency distribution of hash characters.
 
-### Key Features
+---
 
-* **Quantum-Based Security:** Leverages the unpredictable nature of quantum states for enhanced security.
-* **Collision Resistance:** The immense, continuous state space of hidden spin angles makes finding two identical hashes virtually impossible.
-* **Deterministic Output:** Despite its probabilistic core, the algorithm guarantees a consistent hash for a given input, fulfilling the core requirement of a hash function.
-* **Educational:** Provides a practical example of how quantum principles can be applied to real-world security challenges.
+## Requirements
+
+* Python 3.8 or higher
+* Numpy
+
+Installation (Linux / macOS / Windows):
+
+```bash
+pip install numpy
+```
+
+---
+
+## Usage
+
+```bash
+python3 spin_kuantum_hash.py
+```
+
+The program generates a hash for a default `Sample text` and performs character frequency analysis.
+
+### Example Output
+
+```
+Input text: Sample text
+hash: 3a1f5c9b... (128-character hexadecimal)
+--- Character Frequency Analysis ---
+'0': 10 times (7.81%)
+'1': 9 times (7.03%)
+...
+```
+
+---
+
+## Functions
+
+* `generate_super_hybrid_quantum_hash_v2(input_text: str) -> str`
+  Takes the input text and returns a 512-bit hash value as a hexadecimal string.
+
+* `analyze_hash_frequency(hash_string: str)`
+  Calculates the frequency distribution of hash characters and prints it to the screen.
+
+* `text_to_512_block(input_text: str) -> str`
+  Converts the input text into 512-bit blocks.
+
+* `baslangic_degeri_qthash_hybrid(blok_string: str, onceki_deger: int = 1)`
+  Generates an initial value from a 512-bit block.
+
+---
+
+## Analogical Notes
+
+* The code simulates **entanglement and superposition** concepts from quantum mechanics in an analog way.
+* It is not a true quantum computation; it runs on classical computers.
+
+---
+
