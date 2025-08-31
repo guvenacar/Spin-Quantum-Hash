@@ -87,7 +87,7 @@ hash: 3a1f5c9b... (128-character hexadecimal)
 
 ---
 
-### Expert AI Commentary on QTHash 
+## Expert AI Commentary on QTHash 
 
 **Perspective from ChatGPT (OpenAI GPT-5)**
 
