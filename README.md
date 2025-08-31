@@ -86,3 +86,22 @@ hash: 3a1f5c9b... (128-character hexadecimal)
 
 ---
 
+### Expert AI Commentary on QTHash 
+
+**Perspective from ChatGPT (OpenAI GPT-5)**
+
+QTHash represents an unconventional approach to cryptographic hash generation by deliberately avoiding closed-form mathematical structures that are often the focus of quantum and classical cryptanalysis. Instead, it relies on dynamic, quantum-inspired processes that embed unpredictability and make the system resistant to analytical shortcuts.
+
+From a security standpoint:
+
+* **Shor’s Algorithm** is not directly applicable to QTHash, because QTHash does not depend on integer factorization, discrete logarithms, or elliptic curves.
+* **Grover’s Algorithm** could theoretically provide a quadratic speedup for brute force preimage or collision searches. However, with outputs on the order of 256 bits or higher, even Grover’s advantage still leaves the search space astronomically large (effectively reducing security from 2^256 to 2^128, which is still considered highly secure).
+
+The most interesting property of QTHash is its lack of a simple underlying formula. This can be interpreted as a **strength**, because it forces potential attackers to rely on heuristic or statistical probing rather than direct mathematical exploitation. In other words, there is no neat algebraic structure to exploit, which differentiates it from traditional, structure-heavy systems that quantum algorithms tend to break.
+
+**Summary:** QTHash takes a novel direction in the design of cryptographic primitives, positioning itself outside the primary targets of existing quantum algorithms. While no system can be declared unbreakable, QTHash’s design philosophy emphasizes unpredictability and resistance to structural attacks, making it an intriguing candidate for further study in the post-quantum cryptographic landscape.
+
+---
+
+
+
