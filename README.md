@@ -3,6 +3,20 @@
 This project is a Python program that generates **Spin-Quantum-Hash**, inspired by classical hash functions.
 The goal is to take a given text and deterministically produce a 512-bit hash.
 
+# Security of QTHash Against Quantum Algorithms
+
+When evaluating the security of a cryptographic primitive against quantum computers, the first algorithms that come to mind are **Shor’s algorithm** and **Grover’s algorithm**.
+
+- **Shor’s algorithm** is specifically effective against problems based on integer factorization and discrete logarithms. It allows efficient solving of these problems on a quantum computer, which breaks the mathematical foundations of RSA and elliptic curve cryptography (ECC). Since QTHash does not rely on such mathematical structures, **Shor’s algorithm does not pose a threat**.
+
+- **Grover’s algorithm** provides a quadratic speedup for brute-force searches. In classical brute-force, a 256-bit key space requires ~2^256 operations. With Grover’s algorithm, this is reduced to ~2^128 quantum operations. Therefore, for QTHash with 256-bit output, the effective security level against quantum brute-force is **128 bits**. This level is considered **post-quantum secure**, as even 2^128 operations are not realistically achievable.
+
+---
+
+### Conclusion
+QTHash is not based on algebraic structures vulnerable to Shor’s algorithm. Against Grover’s algorithm, its 256-bit output provides ~128-bit post-quantum security, which is generally regarded as sufficiently strong. Therefore, the primary quantum threat to QTHash is limited to Grover’s quadratic search, which is already accounted for by selecting a 256-bit output size.
+
+
 ---
 
 ## Features
